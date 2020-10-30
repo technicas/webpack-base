@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "react": "^17.0.1",
+    "react-devtools": "^3.6.3",
     "react-dom": "^17.0.1"
   }
 }
