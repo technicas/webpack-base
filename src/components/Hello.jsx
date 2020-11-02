@@ -2,7 +2,7 @@
 //组件的首字母一定要是大写
 import React from "react";
 
-function Hello(props) {
+export default function Hello(props) {
     console.log(props)
     //return null
     //在组件中必须返回一个合法的JSX虚拟DOM元素
