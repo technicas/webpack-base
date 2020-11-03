@@ -15,7 +15,25 @@ module.exports = {
     module: {//webpack默认只能打包处理.js后缀类型的文件
         //所有第三方模块的配置规则
         rules: [//第三方匹配规则
-            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ }
+            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ },
+            // { test: /\.css$/, use: ['style-loader', 'css-loader?modules']} //打包处理css样式表第三方loader
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: '[path][name]-[local]',
+                            },
+                        }
+                    }
+                ]
+            },
+            {test: /\.ttf|woff|woff2|eot|svg$/, use: 'url-loader'} //打包处理字体文件的loader
         ]
     },
     resolve: {
