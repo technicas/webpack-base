@@ -1,11 +1,11 @@
 //导包
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import BindEvent from "@/components/BindEvent";
+
+
+import App from "@/App";
+
 
 //渲染
-ReactDOM.render(
-    <div>
-        <BindEvent></BindEvent>
-    </div>, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'))
