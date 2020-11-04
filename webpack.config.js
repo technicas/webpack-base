@@ -24,12 +24,26 @@ module.exports = {
                         loader: "style-loader"
                     },
                     {
+                        loader: 'css-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
                         loader: 'css-loader',
                         options: {
                             modules: {
                                 localIdentName: '[path][name]-[local]',
                             },
                         }
+                    },
+                    {
+                        loader: "sass-loader"
                     }
                 ]
             },
